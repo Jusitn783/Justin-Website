@@ -15,6 +15,7 @@
         <li><a href="index.html">About Me</a></li>
         <li><a href="hobbies.html">Hobbies</a></li>
         <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="Experience.html"> Experience</a></li>
       </ul>
     </nav>
   </header>
@@ -30,15 +31,6 @@
         <p>This is a project where I designed and 3D printed a custom RC boat. The boat is designed for speed and maneuverability, and I'm currently testing its performance on water. I used CAD software to design the boat's body, and the 3D printer took care of the rest. The goal of this project is to explore the possibilities of combining robotics and 3D printing for custom remote-controlled vehicles.</p>
         <img src="images/20250309_155248.jpg" alt="3D Printed RC Boat">
         <p>The boat is powered by a small motor, and I’m experimenting with different designs for the hull and propulsion systems to maximize its speed and handling. I’ve been recording the progress and will release a video detailing the boat’s performance soon.</p>
-        
-        <!-- Video Thumbnail and Play Button -->
-        <div id="video-container">
-          <img src="images/20250301_130400 (1).jpg" alt="RC Boat Video Thumbnail" class="video-thumbnail" onclick="playVideo()">
-        </div>
-        <video id="rc-boat-video" width="80%" controls>
-          <source src="" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
       </section>
 
       <!-- Game Development Section -->
@@ -50,21 +42,6 @@
       </section>
     </div>
   </main>
-
-  <script>
-    // Function to display and play the video when the thumbnail is clicked
-    function playVideo() {
-      var video = document.getElementById("rc-boat-video");
-      var thumbnail = document.querySelector(".video-thumbnail");
-      
-      // Hide the thumbnail and show the video player
-      thumbnail.style.display = "none";
-      video.style.display = "block";
-      
-      // Play the video
-      video.play();
-    }
-  </script>
 
 </body>
 </html>

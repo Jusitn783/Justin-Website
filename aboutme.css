@@ -10,8 +10,9 @@ body {
   background: linear-gradient(135deg, #1a1a2e, #3a0ca3, #000000);
   background-attachment: fixed;
   color: white;
-  font-family: 'Arial', sans-serif; /* More modern font */
+  font-family: 'Arial', sans-serif;
   line-height: 1.6;
+  text-align: center;
 }
 
 header {

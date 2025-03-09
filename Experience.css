@@ -1,0 +1,42 @@
+/* General Page Styling */
+#experience, #education {
+    margin-top: 40px;
+  }
+  
+  .experience-list, .education-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .experience-list li, .education-list li {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+  }
+  
+  .experience-list li:hover, .education-list li:hover {
+    background-color: #444;
+  }
+  
+  .experience-list h3, .education-list h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  
+  .experience-list p, .education-list p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  .experience-list strong, .education-list strong {
+    font-weight: bold;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-top: 40px;
+  }
+  
