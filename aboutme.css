@@ -1,0 +1,195 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Makes the layout cleaner */
+}
+
+body {
+  background: linear-gradient(135deg, #1a1a2e, #3a0ca3, #000000);
+  background-attachment: fixed;
+  color: white;
+  font-family: 'Arial', sans-serif; /* More modern font */
+  line-height: 1.6;
+}
+
+header {
+  background-color: #333;
+  padding: 15px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 8px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  background-color: #f0a500;
+}
+
+main {
+  padding: 20px;
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.8;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  width: 80%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 15px;  /* Rounded image edges */
+  display: block;
+  margin: 30px auto;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  img {
+    width: 90%;
+  }
+}
+
+/* Skills Section */
+#skills {
+  background-color: #1a1a2e;
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
+  /* Centering the skills section */
+  max-width: 800px; /* Adjust this value as needed */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#skills h3 {
+  font-size: 2rem;
+  text-align: center;
+  color: #f0a500;
+  margin-bottom: 20px;
+}
+
+#skills ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+#skills ul li {
+  background-color: #3a0ca3;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: white; /* Set text color to white */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+  
+  /* Make all boxes the same size */
+  height: 150px; /* Fixed height for uniform size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#skills ul li a {
+  color: white; /* Ensure links are also white */
+  text-decoration: none; /* Remove underline from links */
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+#skills ul li:hover {
+  transform: translateY(-5px); /* Hover effect for lifting the box */
+  background-color: #f0a500; /* Change color on hover */
+}
+
+@media (max-width: 768px) {
+  #skills ul {
+    grid-template-columns: 1fr 1fr; /* Two columns on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  #skills ul {
+    grid-template-columns: 1fr; /* One column on small screens */
+  }
+}
