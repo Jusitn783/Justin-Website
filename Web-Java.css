@@ -1,0 +1,87 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e2e;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: #282a36;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Headings */
+h1 {
+    color: #ff79c6;
+}
+
+h2 {
+    color: #bd93f9;
+}
+
+/* Buttons */
+.button {
+    background-color: #6272a4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background-color: #50fa7b;
+}
+
+/* Game Container */
+.game-container {
+    margin-top: 20px;
+}
+
+.iframe-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;  /* Center the iframe horizontally */
+    align-items: center;      /* Center the iframe vertically */
+    margin-top: 20px;
+}
+
+iframe {
+    width: 100%;              /* Make it responsive */
+    height: 60vh;             /* Use viewport height for better scaling */
+    max-width: 800px;         /* Set a max width to avoid the iframe becoming too wide */
+    border: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    iframe {
+        height: 50vh;         /* Adjust height for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    iframe {
+        height: 40vh;         /* Adjust height for phones */
+    }
+
+    .container {
+        width: 90%;            /* Make the container smaller on phones */
+        padding: 15px;
+    }
+
+    .button {
+        font-size: 14px;       /* Make the button text a bit smaller */
+    }
+}
