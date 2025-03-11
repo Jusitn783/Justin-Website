@@ -1,10 +1,11 @@
-/* General Styles */
+/* Reset Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body - Centers Everything */
 body {
     font-family: Arial, sans-serif;
     background-color: #1e1e2e;
@@ -13,53 +14,46 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    flex-direction: column;
     text-align: center;
     padding: 0;
-    height: 100%; /* Ensure body takes full height */
 }
 
-/* Container */
+/* Main Container */
 .container {
-    width: 90%; /* Make container width smaller */
-    max-width: 800px; /* Max width for large screens */
+    width: 90%;
+    max-width: 800px;
+    background-color: #333;
+    border-radius: 10px;
     padding: 20px;
-    margin: 20px 0;
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-sizing: border-box;
-    background-color: #333; /* Background for the container */
-    border-radius: 10px; /* Rounded corners */
-    min-height: 80vh; /* Minimum height of the container */
-    max-height: 90vh; /* Maximum height to prevent overflow */
 }
 
 /* Header */
 .header {
-    margin-top: 20px; /* Smaller margin */
-    padding: 15px;
+    margin-bottom: 20px;
 }
 
 .header h1 {
-    font-size: 2rem; /* Smaller font size */
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
 .header p {
-    font-size: 1rem; /* Smaller paragraph font size */
-    margin-bottom: 20px;
+    font-size: 1rem;
 }
 
 /* Button */
 .button {
     background-color: #6272a4;
     color: white;
-    padding: 10px 20px; /* Smaller button size */
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px; /* Smaller button text */
+    font-size: 14px;
 }
 
 .button:hover {
@@ -68,84 +62,62 @@ body {
 
 /* Game Section */
 .game-section {
-    margin-top: 30px; /* Smaller margin */
-    padding: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.game-section h2 {
-    font-size: 1.8rem; /* Smaller font size */
-    margin-bottom: 15px;
-}
-
-.game-section p {
-    font-size: 1rem; /* Smaller paragraph text */
-    margin-bottom: 20px;
-}
-
-/* Iframe Section */
+/* Iframe Wrapper - Centers the Game */
 .iframe-wrapper {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     padding: 20px 0;
 }
 
+/* Iframe (Default - Desktop) */
 iframe {
     width: 100%;
-    max-width: 600px; /* Smaller iframe width */
-    height: 300px; /* Smaller iframe height */
+    max-width: 600px;
+    height: 600px;
     border: none;
 }
 
-/* Responsive Adjustments */
+/* Tablets (Smaller Game) */
 @media (max-width: 1024px) {
-    .container {
-        padding: 15px; /* Slightly smaller padding for tablets */
-    }
-
     iframe {
-        height: 250px; /* Reduce iframe height further on tablets */
+        max-width: 450px;
+        height: 450px;
     }
 }
 
+/* Small Tablets (Even Smaller) */
 @media (max-width: 768px) {
-    .container {
-        padding: 10px; /* Less padding on small tablets */
-    }
-
     iframe {
-        height: 200px; /* Smaller iframe height for small tablets */
+        max-width: 350px;
+        height: 350px;
     }
 }
 
+/* Phones (Much Smaller) */
 @media (max-width: 480px) {
-    .container {
-        padding: 5px; /* Less padding for mobile */
-    }
-
     iframe {
-        height: 180px; /* Reduce iframe height for mobile */
+        max-width: 250px;
+        height: 250px;
     }
 
     .header h1 {
-        font-size: 1.5rem; /* Even smaller font on mobile */
+        font-size: 1.5rem;
     }
 
     .header p {
-        font-size: 0.9rem; /* Smaller paragraph on mobile */
+        font-size: 0.9rem;
     }
 
     .button {
-        padding: 8px 16px; /* Smaller button size for mobile */
-        font-size: 12px; /* Smaller button text on mobile */
-    }
-
-    .game-section h2 {
-        font-size: 1.5rem; /* Smaller title for the game section */
-    }
-
-    .game-section p {
-        font-size: 0.9rem; /* Smaller description text */
+        padding: 8px 16px;
+        font-size: 12px;
     }
 }
