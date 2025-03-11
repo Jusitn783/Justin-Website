@@ -1,87 +1,151 @@
 /* General Styles */
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
     background-color: #1e1e2e;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
     text-align: center;
-    color: #ffffff;
+    padding: 0;
+    height: 100%; /* Ensure body takes full height */
 }
 
 /* Container */
 .container {
-    max-width: 800px;
-    margin: 50px auto;
-    background: #282a36;
+    width: 90%; /* Make container width smaller */
+    max-width: 800px; /* Max width for large screens */
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #333; /* Background for the container */
+    border-radius: 10px; /* Rounded corners */
+    min-height: 80vh; /* Minimum height of the container */
+    max-height: 90vh; /* Maximum height to prevent overflow */
 }
 
-/* Headings */
-h1 {
-    color: #ff79c6;
+/* Header */
+.header {
+    margin-top: 20px; /* Smaller margin */
+    padding: 15px;
 }
 
-h2 {
-    color: #bd93f9;
+.header h1 {
+    font-size: 2rem; /* Smaller font size */
+    margin-bottom: 10px;
 }
 
-/* Buttons */
+.header p {
+    font-size: 1rem; /* Smaller paragraph font size */
+    margin-bottom: 20px;
+}
+
+/* Button */
 .button {
     background-color: #6272a4;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 20px; /* Smaller button size */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
-    font-size: 16px;
-    transition: background 0.3s ease;
+    font-size: 14px; /* Smaller button text */
 }
 
 .button:hover {
     background-color: #50fa7b;
 }
 
-/* Game Container */
-.game-container {
-    margin-top: 20px;
+/* Game Section */
+.game-section {
+    margin-top: 30px; /* Smaller margin */
+    padding: 15px;
 }
 
+.game-section h2 {
+    font-size: 1.8rem; /* Smaller font size */
+    margin-bottom: 15px;
+}
+
+.game-section p {
+    font-size: 1rem; /* Smaller paragraph text */
+    margin-bottom: 20px;
+}
+
+/* Iframe Section */
 .iframe-wrapper {
-    width: 100%;
     display: flex;
-    justify-content: center;  /* Center the iframe horizontally */
-    align-items: center;      /* Center the iframe vertically */
-    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
 }
 
 iframe {
-    width: 100%;              /* Make it responsive */
-    height: 60vh;             /* Use viewport height for better scaling */
-    max-width: 800px;         /* Set a max width to avoid the iframe becoming too wide */
+    width: 100%;
+    max-width: 600px; /* Smaller iframe width */
+    height: 300px; /* Smaller iframe height */
     border: none;
 }
 
-/* Responsive Design */
+/* Responsive Adjustments */
 @media (max-width: 1024px) {
+    .container {
+        padding: 15px; /* Slightly smaller padding for tablets */
+    }
+
     iframe {
-        height: 50vh;         /* Adjust height for tablets */
+        height: 250px; /* Reduce iframe height further on tablets */
     }
 }
 
 @media (max-width: 768px) {
-    iframe {
-        height: 40vh;         /* Adjust height for phones */
+    .container {
+        padding: 10px; /* Less padding on small tablets */
     }
 
+    iframe {
+        height: 200px; /* Smaller iframe height for small tablets */
+    }
+}
+
+@media (max-width: 480px) {
     .container {
-        width: 90%;            /* Make the container smaller on phones */
-        padding: 15px;
+        padding: 5px; /* Less padding for mobile */
+    }
+
+    iframe {
+        height: 180px; /* Reduce iframe height for mobile */
+    }
+
+    .header h1 {
+        font-size: 1.5rem; /* Even smaller font on mobile */
+    }
+
+    .header p {
+        font-size: 0.9rem; /* Smaller paragraph on mobile */
     }
 
     .button {
-        font-size: 14px;       /* Make the button text a bit smaller */
+        padding: 8px 16px; /* Smaller button size for mobile */
+        font-size: 12px; /* Smaller button text on mobile */
+    }
+
+    .game-section h2 {
+        font-size: 1.5rem; /* Smaller title for the game section */
+    }
+
+    .game-section p {
+        font-size: 0.9rem; /* Smaller description text */
     }
 }
