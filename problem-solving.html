@@ -16,83 +16,80 @@
         <section class="game-development">
             <h2>Game Development</h2>
             <p>
-                In my current game project, the main character is struggling with schizophrenia and processing grief after a tragic event. Here’s a breakdown of how I approach creating this game:
+                For my senior project in my IT class, I’m working with a group to create a game using **C# and Unity**. The game follows a character dealing with schizophrenia and grief, using gameplay to reflect their emotions and struggles. Here’s how we’re tackling development:
             </p>
             <ul>
-                <li><strong>Concept & Storyline:</strong> I start with a clear idea of what the story is about and how it will play out. The story for this game is driven by emotions and mental health struggles, which will be reflected in the gameplay.</li>
-                <li><strong>Game Design:</strong> I then create a rough design of how the game will look, what mechanics will be included, and how the user will interact with it.</li>
-                <li><strong>Programming:</strong> I use JavaScript for the game logic, focusing on managing game states (e.g., intro, main game, end). The character's behavior, including interactions with the environment, is handled through conditionals and event listeners.</li>
-                <li><strong>Debugging:</strong> I constantly test the game to find and fix issues. This could involve fixing problems with the character’s movement or ensuring the UI is functioning correctly.</li>
+                <li><strong>Concept & Storyline:</strong> We focus on creating an immersive experience where the game’s mechanics and visuals reflect the character’s mental state.</li>
+                <li><strong>Game Design:</strong> We plan the environment, interactions, and mechanics to enhance storytelling.</li>
+                <li><strong>Programming in C#:</strong> We use **Unity** and **C#** to handle movement, interactions, and game logic.</li>
+                <li><strong>Debugging & Testing:</strong> We run constant tests to fix issues with movement, UI, and sound.</li>
             </ul>
 
             <h3>Code Example from the Game</h3>
-            <p>Here's a snippet from my current game project:</p>
+            <p>Here's a snippet from our game that adds a ticking clock sound effect in Unity:</p>
             <pre><code>
-                // Character movement code
-                function moveCharacter() {
-                    if (keyPressed == 'left') {
-                        character.x -= speed;
-                    } else if (keyPressed == 'right') {
-                        character.x += speed;
-                    }
-                    if (keyPressed == 'up') {
-                        character.y -= speed;
-                    } else if (keyPressed == 'down') {
-                        character.y += speed;
-                    }
-                }
+using UnityEngine;
+
+public class ClockTicking : MonoBehaviour
+{
+    public AudioSource audioSource;
+    public AudioClip tickingSound;
+    public float interval = 1f;
+
+    void Start()
+    {
+        if (audioSource == null)
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
+
+        if (audioSource != null && tickingSound != null)
+        {
+            audioSource.spatialBlend = 1f; 
+            audioSource.rolloffMode = AudioRolloffMode.Logarithmic; 
+            audioSource.maxDistance = 15f; 
+
+            InvokeRepeating("PlayTickingSound", 0f, interval);
+        }
+        else
+        {
+            Debug.LogWarning("AudioSource or ticking sound missing on " + gameObject.name);
+        }
+    }
+
+    void PlayTickingSound()
+    {
+        audioSource.PlayOneShot(tickingSound);
+    }
+}
             </code></pre>
         </section>
 
-        <section class="website-development">
-            <h2>Website Development</h2>
-            <p>
-                For my personal website, I focus on making sure the design is clean, easy to navigate, and showcases my work. Here’s how I go about it:
-            </p>
-            <ul>
-                <li><strong>Layout & Structure:</strong> I use HTML to structure the content, ensuring it’s easy to read and responsive. I also make use of CSS to create a layout that adjusts based on the screen size.</li>
-                <li><strong>Design Choices:</strong> I choose a minimalistic style with dark colors to make the content stand out and reduce distractions for the user.</li>
-                <li><strong>Functionality:</strong> I use JavaScript to add interactivity to the website, like animations and transitions when the user clicks or scrolls.</li>
-                <li><strong>Testing & Optimization:</strong> I frequently test my site on different devices to make sure it functions as expected and adjust the code where necessary.</li>
-            </ul>
-
-            <h3>Code Example from the Website</h3>
-            <p>Here's a snippet from my website's code:</p>
-            <pre><code>
-                // Example of a smooth scroll effect for navigation
-                document.querySelector('.smooth-scroll').addEventListener('click', function(event) {
-                    event.preventDefault();
-                    document.querySelector(event.target.hash).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            </code></pre>
-        </section>
+        
 
         <section class="code-org">
             <h2>Using Code.org</h2>
             <p>
-                I use <a href="https://code.org" target="_blank">code.org</a> as a learning platform to improve my coding skills, especially in areas like game development and logic-based problem solving. The lessons on code.org are useful because they break down complex concepts into manageable pieces.
+                I use <a href="https://code.org" target="_blank">code.org</a> as a learning platform to improve my coding skills, especially in game development and problem-solving. The lessons help break down complex concepts into manageable steps.
             </p>
             <p>Here’s how I use code.org to enhance my projects:</p>
             <ul>
-                <li><strong>Learning Fundamentals:</strong> I take courses on coding basics and game development to build a strong foundation in programming concepts.</li>
-                <li><strong>Project Building:</strong> I use code.org’s sandbox environment to build small projects before applying the skills to my larger games or websites.</li>
-                <li><strong>Problem Solving:</strong> I practice solving coding challenges on code.org to improve my ability to troubleshoot and fix issues in my projects.</li>
+                <li><strong>Learning Fundamentals:</strong> I take coding courses to build a strong foundation.</li>
+                <li><strong>Project Building:</strong> I use code.org’s sandbox to test ideas before applying them to bigger projects.</li>
+                <li><strong>Problem Solving:</strong> I practice coding challenges to improve debugging skills.</li>
             </ul>
 
             <h3>Code.org Project Example</h3>
-            <p>Here’s a snippet from a simple game I created on code.org:</p>
+            <p>Here’s a snippet from a simple game I made on code.org:</p>
             <pre><code>
-                // Simple game logic
-                function startGame() {
-                    var score = 0;
-                    while (score < 10) {
-                        // Game loop
-                        score += 1;
-                    }
-                    alert('You win!');
-                }
+// Simple game logic
+function startGame() {
+    var score = 0;
+    while (score < 10) {
+        score += 1;
+    }
+    alert('You win!');
+}
             </code></pre>
         </section>
 
